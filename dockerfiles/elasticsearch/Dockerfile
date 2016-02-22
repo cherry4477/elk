@@ -7,7 +7,7 @@ RUN (cd /tmp && \
     tar zxf pkg.tar.gz && mv elasticsearch-* /opt/elasticsearch &&\
     rm -rf /tmp/*)
 RUN mkdir -p /opt/elasticsearch/config
-COPY elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
+COPY dockerfiles/elasticsearch/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 EXPOSE 9200
 EXPOSE 9300
 VOLUME /opt/elasticsearch/data
