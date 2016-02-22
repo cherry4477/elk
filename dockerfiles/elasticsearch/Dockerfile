@@ -6,7 +6,7 @@ RUN (cd /tmp && \
     wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.0.tar.gz -O pkg.tar.gz && \
     tar zxf pkg.tar.gz && mv elasticsearch-* /opt/elasticsearch &&\
     rm -rf /tmp/*)
-RUN mkdir -P /opt/elasticsearch/config
+RUN mkdir -p /opt/elasticsearch/config
 COPY elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 EXPOSE 9200
 EXPOSE 9300
